@@ -1,0 +1,23 @@
+<html>
+	<body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<select id="combo">
+		  <option value="1">English</option>
+		  <option value="2">French</option>
+		</select>
+		<input id="button1" type="button" value="Get Results" />
+		<script>
+			$(document).ready(function(){ 
+			  $('#button1').click(function(){ 
+				if($('#combo :selected').text() == "English"){
+					document.getElementById("languageText").innerHTML = "show languages for English";
+				}
+				if($('#combo :selected').text() == "French"){
+					document.getElementById("languageText").innerHTML = "show languages for French";
+				}
+			  });
+			});
+		</script>
+		<p id = "languageText"></p>
+	</body>
+</html>
