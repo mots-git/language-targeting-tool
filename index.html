@@ -2,116 +2,16 @@
 	<body>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<div id="mainContainer">
-			<select id="combo">
-			  <option value="1">Spanish</option>
-			  <option value="2">French</option>
-			  <option value="3">English</option>
-			</select>
-			<input id="button1" type="button" value="Get Results" />
-		</div>
-		
-		<script>
-			$(document).ready(function(){ 
-				//EXCEPTION and NON EXCEPTION LANGUAGE SELECTOR AND ENGLISH FLOW
-			  $('#button1').click(function(){ 
-				if($('#combo :selected').text() == "Spanish"){
-					document.getElementById("nonExceptionLanguage").style.display = "block";
-					document.getElementById("exceptionLanguage").style.display = "none";
-					document.getElementById("englishLanguage").style.display = "none";
-					document.getElementById("languageTextNonException").innerHTML = "show languages for Spanish";
-				}
-				if($('#combo :selected').text() == "English"){
-					document.getElementById("nonExceptionLanguage").style.display = "none";
-					document.getElementById("mainContainer").style.display = "none";
-					document.getElementById("exceptionLanguage").style.display = "none";
-					document.getElementById("englishLanguage").style.display = "block";
-					document.getElementById("languageTextException").innerHTML = "show languages for English";
-				}
-				if($('#combo :selected').text() == "French"){
-					document.getElementById("nonExceptionLanguage").style.display = "none";
-					document.getElementById("englishLanguage").style.display = "none";
-					document.getElementById("exceptionLanguage").style.display = "block";
-					document.getElementById("languageTextException").innerHTML = "show languages for French";
-				}
-			  });
-			  //ENGLISH FLOW COUNTRY SELECTOR
-			  $('#englishButton').click(function(){ 
-				if($('#comboEnglish :selected').text() == "Spain"){					
-					document.getElementById("englishResults").style.display = "block";
-					document.getElementById("languageTextNonException").innerHTML = "show languages for Spanish";
-				}
-				if($('#comboEnglish :selected').text() == "France"){					
-					document.getElementById("englishResults").style.display = "block";
-					document.getElementById("languageTextException").innerHTML = "show languages for English";
-				}
-				if($('#comboEnglish :selected').text() == "Germany"){					
-					document.getElementById("englishResults").style.display = "block";
-					document.getElementById("languageTextException").innerHTML = "show languages for French";
-				}
-			  });
-			});
-		</script>
-		<!-- Non Exception Language -->
-		<div id="nonExceptionLanguage" style="display:none;">
-			<p id = "languageTextNonException"></p>
-			<p>Language of Profiles that can be served</p>
-			<ul>
-				<li>xxx</li>
-			</ul>
-			<p>Language ad needs to be served in:</p>
-			<ul>
-				<li>xxx</li>
-			</ul>
-		</div>
-		<!-- English Language -->
-		<div id="englishLanguage" style="display:none;">
-			<div id="englishDropdown">
-				<p>Country being targeted</p>
-				<input id="englishButton" type="button" value="Get Results" />				
-				<select id="comboEnglish">
-				  <option value="1">Spain</option>
-				  <option value="2">France</option>
-				  <option value="3">Germany</option>
-				</select>
+			<div class="col-md-3 col-md-offset-3">
+				<div class="well" onclick="location.href='sponsoredContent.html';" style="background-color: blue; color: white;">
+				Sponsored Content
+				</div>
 			</div>
-			<div id="englishResults" style="display:none;">
-				<p id = "languageTextNonException"></p>
-				<p>Language of Profiles that can be served</p>
-				<ul>
-					<li>xxx</li>
-					<li>English</li>
-				</ul>
-				<p>Language ad needs to be served in:</p>
-				<ul>
-					<li>xxx</li>
-					<li>English</li>
-				</ul>
-			</div>
-		</div>
-		<!-- Exception Language -->
-		<div id="exceptionLanguage" style="display:none;">
-			<div id="geoWindow">
-				<p id = "languageTextException"></p>
-				<p>exceptionLanguage</p>
-				<p>Please note:</p><p>xxx</p><p>Language is an exception language</p>
-				<p>This langauge is associated to these Geos:</p>
-				<ul>
-					<li>X location</li>
-					<li>Y location</li>
-					<li>Z location</li>
-				</ul>
-			</div>
-			<div id ="exceptionResults">
-				<p>Language of Profiles that can be served</p>
-				<ul>
-					<li>xxx</li>
-					<li>English</li>
-				</ul>
-				<p>Language ad needs to be served in:</p>
-				<ul>
-					<li>xxx</li>
-					<li>English</li>
-				</ul>
+			<br><br>
+			<div class="col-md-3 col-md-offset-3">
+				<div class="well" onclick="location.href='sponsoredMessaging.html';" style="background-color: blue; color: white;">
+				Sponsored Messaging
+				</div>
 			</div>
 		</div>
 	</body>
