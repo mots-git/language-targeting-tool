@@ -44,6 +44,7 @@
 			border-style: solid;
     		border-color: black;
 		}
+
 		#combo{
 			width: 250%;
 			height: 7.3%;
@@ -156,29 +157,37 @@
 					document.getElementById("languageAdsNonException").innerHTML = "Japanese";
 					document.getElementById("nonExceptionDescription").innerHTML = "As the campaign language settings is Japanese, only Japanese profiles and Japanese Creatives can be served.";
 				}
-				if($('#combo :selected').text() == "Bahasa Indonesian"){
+				if($('#combo :selected').text() == "Indonesian"){
 					document.getElementById("nonExceptionLanguage").style.display = "block";
 					document.getElementById("exceptionLanguage").style.display = "none";
 					document.getElementById("englishResults").style.display = "none";
-					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
-					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
-					document.getElementById("nonExceptionDescription").innerHTML = "As the campaign language settings is {{title}}, only {{title}} profiles and {{title}} Creatives can be served.";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "Bahasa";
+					document.getElementById("languageAdsNonException").innerHTML = "Bahasa";
+					document.getElementById("nonExceptionDescription").innerHTML = "As the campaign language settings is Bahasa, only Bahasa profiles and Bahasa Creatives can be served.";
 				}
 				if($('#combo :selected').text() == "Korean"){
-					document.getElementById("nonExceptionLanguage").style.display = "block";
-					document.getElementById("exceptionLanguage").style.display = "none";
-					document.getElementById("englishResults").style.display = "none";
-					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
-					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
-					document.getElementById("nonExceptionDescription").innerHTML = "As the campaign language settings is {{title}}, only {{title}} profiles and {{title}} Creatives can be served.";
-				}
-				if($('#combo :selected').text() == "Traditional Chinese"){
 					document.getElementById("nonExceptionLanguage").style.display = "block";
 					document.getElementById("exceptionLanguage").style.display = "none";
 					document.getElementById("englishResults").style.display = "none";
 					document.getElementById("languageProfilesNonExeception").innerHTML = "Korean";
 					document.getElementById("languageAdsNonException").innerHTML = "Korean";
 					document.getElementById("nonExceptionDescription").innerHTML = "As the campaign language settings is Korean, only Korean profiles and Korean Creatives can be served.";
+				}
+				if($('#combo :selected').text() == "Traditional Chinese"){
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "Chinese";
+					document.getElementById("languageAdsNonException").innerHTML = "Chinese";
+					document.getElementById("nonExceptionDescription").innerHTML = "Currently not supported. The exception is for advertisers based in Hong Kong targeting Hong Kong Geo.";
+				}
+				if($('#combo :selected').text() == "Malaysian"){
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "Malay";
+					document.getElementById("languageAdsNonException").innerHTML = "Malay";
+					document.getElementById("nonExceptionDescription").innerHTML = "As the campaign language settings is Malay, only Malay profiles and Malay Creatives can be served.";
 				}
 				if($('#combo :selected').text() == "Arabic"){
 					document.getElementById("nonExceptionLanguage").style.display = "block";
@@ -408,10 +417,11 @@
 					<option value="14">Romanian</option>
 					<option value="14">Swedish</option>
 					<option value="16">Polish</option>
-					<option value="17">Bahasa Indonesian</option>
+					<option value="17">Indonesian</option>
 					<option value="19">Arabic</option>
 					<option value="20">Korean</option>
 					<option value="21">Traditional Chinese</option>
+					<option value="22">Malaysian</option>
 				</select>
                </div>
               
